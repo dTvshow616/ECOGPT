@@ -1,0 +1,40 @@
+
+{
+  "manifest_version": 3,
+  "name": "ECOGPT",
+  "description": "Extension that tells you how much energy you've wasted by using ChatGPT.",
+  "version": "1.0",
+  "author": "ana.olsson@estudiante.uam.es",
+
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "content_scripts":[
+    {
+     "matches":["https://chatgpt.com/"],
+     "js":["main.js"]
+    }
+  ],
+
+  "action": {
+    "default_title": "Click Me :)",
+    "default_popup": "popup.html",
+    "default_icon": {              
+      "16": "images/icon16.png",   
+      "24": "images/icon24.png",   
+      "32": "images/icon32.png" 
+    }
+  },
+
+  "host_permissions": [
+    "https://*.example.com/"
+  ],
+
+  "permissions": [
+    "storage"
+  ]
+}
